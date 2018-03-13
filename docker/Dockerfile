@@ -7,6 +7,6 @@ RUN apt-get update &&\
     pip install awscli-cwlogs && \
     pip install --upgrade awscli
 
-COPY start-with-params.sh .
+COPY start-with-params.sh entrypoint.sh ./
 
-CMD ["./start-with-params.sh]
+ENTRYPOINT ["./entrypoint.sh"]
